@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lionel@coder</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 22px;
+            background-image: radial-gradient(black,grey);
+        }
+        body{ 
+            width: 90%;
+            height: 100%;
+            background-color: azure;
+            margin: 0 auto;
+            border-radius: 20px;
+            position: relative;
+            font-family: sans-serif;
+        }
+        header{
+            text-align: center;
+  text-transform:uppercase;
+  padding:32px;
+  background-color:#0a0a23;
+  color:#fff;
+  border-bottom:4px solid #fdb347;
+        }
+        .container{
+            border: 5px double black;
+            width: 35%;
+            border-radius: 50%;
+            
+            margin: 0 auto;
+            animation: lionel 5s ease-in-out 1s 2 normal forwards;
+        }
+        @keyframes lionel {
+            0%{
+                transform: 0;
+            }
+            30%{
+                transform: translateX(400px) rotate(360deg);
+                
+            }
+            60%{
+                transform: translateX(-400px) rotate(-360deg); 
+            }
+            100%{
+                transform: 0;
+            }
+        }
+       .profile{
+        width: 100%;
+        border-radius: 50%;
+       }
+        footer{
+            background-color: bisque;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            border-radius: 0 0 20px 20px;
+        }
+        .gallery img{
+  width:100%;
+  max-width:350px;
+  height:300px;
+  object-fit: cover;
+  border-radius:10px;
+  animation: moveSlide 2.5s ease-in-out 1s 1 normal forwards;
+}
+@keyframes moveSlide {
+    0%{
+        transform: translateY(-10000px) scale(10) rotate(720deg);
+    }
+    
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  gap: 16px;
+}
+.gallery::after{
+  content: "";
+  width: 350px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>css flexbox photo gallery</h1>
+    </header>
+   <main>
+
+     <div class="container">
+        <img class="profile" src="images/lionel pic.jpg" alt="lionel picture" >
+    </div> 
+
+    <div class="gallery">
+        <img class="img" src="images/1.jpg" alt="">
+        <img class="img" src="images/2.jpg" alt="">
+        <img class="img" src="images/3.jpg" alt="">
+        <img class="img" src="images/4.jpg" alt="">
+        <img class="img" src="images/5.jpg" alt="">
+        <img class="img" src="images/6.jpg" alt="">
+        <img class="img" src="images/7.jpg" alt="">
+        <img class="img" src="images/8.jpg" alt="">
+        <img class="img" src="images/9.jpg" alt="">
+        
+    </div>
+
+    </main>
+
+    <footer>
+       <span> Lionel@coder  <time id="year"></time></span>
+
+    </footer>
+
+    <script src="root.js" defer></script>
+</body>
+</html>
+
+
